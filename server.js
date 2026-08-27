@@ -6,8 +6,8 @@ app.get('/', (req, res) => {
     res.json({ status: "Online", message: "Backend is running in Docker!" });
 });
 
-app.get('/api/data', (req, res) => {
-    res.json({ data: ["Jenkins", "Docker", "S3", "CloudFront"] });
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
